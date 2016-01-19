@@ -1,1 +1,1 @@
-{"version":3,"file":"wine.js","sourceRoot":"","sources":["../../app/wine/wine.ts"],"names":[],"mappings":""}
+{"version":3,"file":"wine.js","sourceRoot":"","sources":["../../app/wine/wine.ts"],"names":["Wine","Wine.constructor","Wine.name"],"mappings":";;;;;YAAA;gBAWEA,cAAYA,IAAYA;oBACtBC,IAAIA,CAACA,KAAKA,GAAGA,IAAIA,CAACA;gBACpBA,CAACA;gBATDD,sBAAIA,sBAAIA;yBAARA;wBACEE,MAAMA,CAACA,IAAIA,CAACA,KAAKA,CAACA;oBACpBA,CAACA;yBACDF,UAASA,KAAKA;wBACZE,IAAIA,CAACA,KAAKA,GAAGA,IAAIA,CAACA;oBACpBA,CAACA;;;mBAHAF;gBAQHA,WAACA;YAADA,CAACA,AAdD,IAcC;YAdD,uBAcC,CAAA"}

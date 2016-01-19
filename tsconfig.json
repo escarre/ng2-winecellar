@@ -4,11 +4,11 @@
     "module": "system",
     "moduleResolution": "node",
     "sourceMap": true,
+    "outDir": "build",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "removeComments": false,
-    "noImplicitAny": false,
-    "outDir": "build"
+    "noImplicitAny": false
   },
   "exclude": [
     "node_modules"

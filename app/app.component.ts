@@ -5,15 +5,16 @@ import {WineService} from './wine/wine.service'
 
 @Component({
 	selector: 'my-app',
-	templateUrl: 'app/app.html',  
-directives: [WineDetailComponent],
-providers: [WineService]
+	templateUrl: 'app/app.html',
+	directives: [WineDetailComponent],
+	providers: [WineService]
 })
 
 export class AppComponent {
-	public title = 'Wine Cellar';
-	public wines: Wine[];
-	public selectedWine: Wine;
+  title = 'Wine Cellar';
+	wines: Wine[];
+	selectedWine: Wine;
+	newWine: String;
 
 	constructor(private _wineService: WineService) { }
 
@@ -26,4 +27,13 @@ export class AppComponent {
   }
 
 	onSelect(wine: Wine) { this.selectedWine = wine; }
+
+	newWineChanged(value: string) {
+  	this.newWine = value;
+	}
+
+	addWine(Wine) {
+		this._wineService.addWine(this.newWine);
+		this.newWine = '';
+	}
 }

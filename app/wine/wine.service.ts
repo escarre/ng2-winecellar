@@ -5,7 +5,15 @@ import {Injectable} from 'angular2/core';
 @Injectable()
 
 export class WineService {
+  wines: Wine[];
+
+  constructor() { this.wines = WINES;  }
+
   getWines(){
-    return Promise.resolve(WINES);
+    return Promise.resolve(this.wines);
+  }
+
+  addWine(newWine: String) {
+    this.wines.push(new Wine (newWine))
   }
 }

@@ -35,6 +35,13 @@ System.register(['angular2/core', './wine/wine-detail.component', './wine/wine.s
                     this.getWines();
                 };
                 AppComponent.prototype.onSelect = function (wine) { this.selectedWine = wine; };
+                AppComponent.prototype.newWineChanged = function (value) {
+                    this.newWine = value;
+                };
+                AppComponent.prototype.addWine = function (Wine) {
+                    this._wineService.addWine(this.newWine);
+                    this.newWine = '';
+                };
                 AppComponent = __decorate([
                     core_1.Component({
                         selector: 'my-app',

@@ -21,7 +21,7 @@ System.register(['angular2/core'], function(exports_1) {
                 }
                 WineDetailComponent = __decorate([
                     core_1.Component({
-                        selector: 'my-wine-detail',
+                        selector: 'wine-detail',
                         templateUrl: 'app/wine/wine-detail.html',
                         inputs: ['wine']
                     }), 
