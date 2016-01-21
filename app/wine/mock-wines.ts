@@ -1,14 +1,10 @@
 import {Wine} from './wine';
 
 export var WINES: Wine[] = [
-    {"id": 11, "name": "Cabernet"},
-    {"id": 12, "name": "Merlot"},
-    {"id": 13, "name": "Malbec"},
-    {"id": 14, "name": "Carmenere"},
-    {"id": 15, "name": "Reisling"},
-    {"id": 16, "name": "Sauvignon Blanc"},
-    {"id": 17, "name": "Brut"},
-    {"id": 18, "name": "Cava"},
-    {"id": 19, "name": "Syrah"},
-    {"id": 20, "name": "Zinfindel"}
+    {"rating": 99, "name": "Justin", "varietal": "Cabernet"},
+    {"rating": 91, "name": "Duckhorn", "varietal": "Merlot"},
+    {"rating": 89, "name": "Cabernet", "varietal": "Carmenere"},
+    {"rating": 94, "name": "Veuve Clicquot", "varietal": "Brut"},
+    {"rating": 96, "name": "Freixenet", "varietal": "Cava"},
+    {"rating": 95, "name": "Peay Le Titan", "varietal": "Syrah"}
 ];

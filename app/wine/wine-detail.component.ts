@@ -9,4 +9,9 @@ import {Wine} from './wine';
 
 export class WineDetailComponent {
    public wine: Wine;
+   editing = false;
+
+   isEditing() {
+     this.editing = !this.editing;
+   }
 }

@@ -35,10 +35,7 @@ System.register(['angular2/core', './wine/wine-detail.component', './wine/wine.s
                     this.getWines();
                 };
                 AppComponent.prototype.onSelect = function (wine) { this.selectedWine = wine; };
-                AppComponent.prototype.newWineChanged = function (value) {
-                    this.newWine = value;
-                };
-                AppComponent.prototype.addWine = function (Wine) {
+                AppComponent.prototype.addWine = function () {
                     this._wineService.addWine(this.newWine);
                     this.newWine = '';
                 };

@@ -1,6 +1,7 @@
 export class Wine {
-  id: number;
+  rating: Number;
   _name: String;
+  _varietal: String;
 
   get name() {
     return this._name;
@@ -9,7 +10,15 @@ export class Wine {
     this._name = name;
   }
 
-  constructor(name: String) {
+  get varietal() {
+    return this._varietal;
+  }
+
+  set varietal(value) {
     this._name = name;
+  }
+
+  constructor(wineName: String) {
+    this._name = wineName;
   }
 }

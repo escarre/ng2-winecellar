@@ -28,11 +28,7 @@ export class AppComponent {
 
 	onSelect(wine: Wine) { this.selectedWine = wine; }
 
-	newWineChanged(value: string) {
-  	this.newWine = value;
-	}
-
-	addWine(Wine) {
+	addWine() {
 		this._wineService.addWine(this.newWine);
 		this.newWine = '';
 	}

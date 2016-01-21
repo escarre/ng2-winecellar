@@ -19,15 +19,17 @@
     <div class="col-lg-12">
       <h1 class="page-header">Wine List</h1>
       <div class=" col-md-4 col-lg-4 col-sm-6">
+        <div class="input-group add-bar">
+          <input class="new-wine list-group-item form-control" placeholder="Add a wine here" [(ngModel)]="newWine">
+          <span class="input-group-btn">
+            <button class="btn btn-primary add" (click)="addWine()">Add</button>
+          </span>
+        </div>
         <ul class="list-group">
           <li *ngFor="#wine of wines" (click)="onSelect(wine)" class="list-group-item">
-            <span class="badge">{{wine.id}}</span> {{wine.name}}
+            <span class="badge">{{wine.rating}}</span> {{wine.name}} <small>{{wine.varietal}}</small>
           </li>
         </ul>
-        <!-- <input class="new-todo" placeholder="What needs to be done?" autofocus
-      #todoInput [value]="newItem" (input)="newItemChanged(todoInput.value)"> -->
-        <input class="new-wine list-group-item" placeholder="Add a wine here" [(ngModel)]="newWine">
-          <button class="btn btn-primary add" (click)="addWine()">Add</button>
       </div>
       <div class="col-md-8">
   		    <wine-detail [wine]="selectedWine"></wine-detail>

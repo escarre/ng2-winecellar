@@ -18,7 +18,11 @@ System.register(['angular2/core'], function(exports_1) {
         execute: function() {
             WineDetailComponent = (function () {
                 function WineDetailComponent() {
+                    this.editing = false;
                 }
+                WineDetailComponent.prototype.isEditing = function () {
+                    this.editing = !this.editing;
+                };
                 WineDetailComponent = __decorate([
                     core_1.Component({
                         selector: 'wine-detail',

@@ -13,7 +13,7 @@ export class WineService {
     return Promise.resolve(this.wines);
   }
 
-  addWine(newWine: String) {
+  addWine(newWine) {
     this.wines.push(new Wine (newWine))
   }
 }
