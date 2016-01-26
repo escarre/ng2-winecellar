@@ -1,35 +1,22 @@
-import {Component, OnInit} from 'angular2/core';
+import {Component} from 'angular2/core';
+import {RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS} from 'angular2/router';
 import {Wine} from './wine/wine';
+import {WinesComponent} from './wine/wines.component';
+import {DashboardComponent} from './dashboard.component';
 import {WineDetailComponent} from './wine/wine-detail.component';
 import {WineService} from './wine/wine.service'
 
 @Component({
 	selector: 'my-app',
 	templateUrl: 'app/app.html',
-	directives: [WineDetailComponent],
-	providers: [WineService]
+	directives: [ROUTER_DIRECTIVES],
+	providers: [WineService, ROUTER_PROVIDERS]
 })
-
+@RouteConfig([
+	{ path: '/dashboard', name: 'Dashboard', component: DashboardComponent, useAsDefault: true },
+	{ path: '/wines', name: 'Wines', component: WinesComponent },
+	{ path: 'detail/:id', name: 'WineDetail', component: WineDetailComponent}
+])
 export class AppComponent {
   title = 'Wine Cellar';
-	wines: Wine[];
-	selectedWine: Wine;
-	newWine: String;
-
-	constructor(private _wineService: WineService) { }
-
-	getWines() {
-		this._wineService.getWines().then(wines => this.wines = wines);
-	}
-
-	ngOnInit() {
-    this.getWines();
-  }
-
-	onSelect(wine: Wine) { this.selectedWine = wine; }
-
-	addWine() {
-		this._wineService.addWine(this.newWine);
-		this.newWine = '';
-	}
 }

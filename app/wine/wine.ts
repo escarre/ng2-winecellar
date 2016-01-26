@@ -1,4 +1,5 @@
 export class Wine {
+  id: Number;
   rating: Number;
   _name: String;
   _varietal: String;

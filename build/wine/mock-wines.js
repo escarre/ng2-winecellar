@@ -4,12 +4,12 @@ System.register([], function(exports_1) {
         setters:[],
         execute: function() {
             exports_1("WINES", WINES = [
-                { "rating": 99, "name": "Justin", "varietal": "Cabernet" },
-                { "rating": 91, "name": "Duckhorn", "varietal": "Merlot" },
-                { "rating": 89, "name": "Cabernet", "varietal": "Carmenere" },
-                { "rating": 94, "name": "Veuve Clicquot", "varietal": "Brut" },
-                { "rating": 96, "name": "Freixenet", "varietal": "Cava" },
-                { "rating": 95, "name": "Peay Le Titan", "varietal": "Syrah" }
+                { "id": 1, "rating": 99, "name": "Justin", "varietal": "Cabernet" },
+                { "id": 2, "rating": 91, "name": "Duckhorn", "varietal": "Merlot" },
+                { "id": 3, "rating": 89, "name": "Cabernet", "varietal": "Carmenere" },
+                { "id": 4, "rating": 94, "name": "Veuve Clicquot", "varietal": "Brut" },
+                { "id": 5, "rating": 96, "name": "Freixenet", "varietal": "Cava" },
+                { "id": 6, "rating": 95, "name": "Peay Le Titan", "varietal": "Syrah" }
             ]);
         }
     }
